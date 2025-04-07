@@ -11,9 +11,13 @@ body{
 }
 
 .highlight{
-    color: #ff6600;
+    color: #F15A29;
 }
 /* navbar section */
+header{
+    background-color: #e0e0e0;
+}
+
 .container{
     display: flex;
     justify-content: center;
@@ -28,7 +32,7 @@ body{
     width: 29rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    background-color: black;
+    background-color: #2C2C2C;
     padding: 0;
     justify-content: center;
     align-items: center;
@@ -50,7 +54,7 @@ body{
 }
 
 .logo{
-    background-color: #ff6600;
+    background-color: #F15A29;
     width: 7rem;
     height: 3rem;
     display: flex;
@@ -60,7 +64,7 @@ body{
     padding-right: 1rem;
     border: none;
     border-radius: 25px;
-    color: black;
+    color: #2C2C2C;
 }
 
 .logo p, .button{
@@ -68,8 +72,8 @@ body{
 }
 
 .button{
-    color: black;
-    background-color:#ff6600;
+    color: #2C2C2C;
+    background-color:#F15A29;
     width: 6rem;
     height: 3rem;
     display: flex;
@@ -88,6 +92,9 @@ body{
 
 
 /* home-section / about-section */
+#home{
+    background-color: #e0e0e0;
+}
 .hero-section, .about-section {
     display: flex;
     flex-direction: column;
@@ -97,95 +104,124 @@ body{
     height: auto;
     padding: 20px;
 }
-.hero-text, .about-text {
+.hero-text{
     width: 100%;
-    max-width: 32rem;
+    max-width: 38rem;
 }
 .hero-text h1, .about-text h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin-bottom: 20px;
-    border: 1px solid black;
+    /* border: 1px solid #2C2C2C; */
 }
-.hero-text p, .about-text p {
-    font-size: 15px;
+.hero-text p{
+    font-size: 20px;
     margin-bottom: 20px;
 }
 .btn {
-    color: #ff6600;
-    background-color: black;
+    color: white;
+    background-color: #F15A29;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 .hero-img, .about-img {
     width: 100%;
-    max-width: 24.5rem;
-    margin-top: 20px;
+    max-width: 25rem;
 }
 .about-text h3 {
     text-decoration: underline;
     margin-bottom: 10px;
 }
 
+.about-text p {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+.about-text {
+    width: 100%;
+    max-width: 43rem;
+}
 .about-text h1{
      border: none;
+     font-size: 3.5rem;
 }
 
 /* testimonial-section */
-#testimonial {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.testimonials-section {
+    padding: 40px 20px;
+    background-color: #e0e0e0;
     text-align: center;
-    height: 65vh;
-}
+  }
 
-#testimonial h2{
-    margin-bottom: 1rem;
-}
-.testimonial-container {
+  .testimonials-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2d2d2d;
+  }
+
+  .testimonial-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 30rem;
-    height: 300px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-.testimonial-slide {
-    display: none;
-    flex-direction: row;
-    align-items: center;
-}
-.testimonial-slide.active {
-    display: flex;
-}
-.testimonial-slide img {
-    width: 10rem;
-    height: 10rem;
-    margin-bottom: 10px;
-    border: 1px solid #ff6600;
-}
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateX(-50%);
-    background: #ddd;
-    border: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
     padding: 10px;
-    cursor: pointer;
+    scroll-behavior: smooth;
+  }
+
+  .testimonial {
+    flex: 0 0 80%;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center;
+    min-width: 300px;
+  }
+
+  .testimonial p {
+    font-size: 1.1rem;
+    color: #444444;
+  }
+
+  .testimonial h4 {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #0d6e4f;
+  }
+
+  /* Hide scrollbar */
+  .testimonial-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonial-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .dots {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #bbb;
     border-radius: 50%;
-}
-.prev { left: -40px; }
-.next { right: -40px; }
-.stars {
-    color: gold;
-}
+    transition: background-color 0.3s;
+  }
+
+  .dot.active {
+    background-color: #0d6e4f;
+  }
 
 /* product section */
 .container {
@@ -221,7 +257,7 @@ body{
 }
 .project-card h3 {
     margin: 15px 0 10px;
-    color: #ff6600;
+    color: #F15A29;
 }
 .project-card p {
     color: #555;
@@ -230,7 +266,7 @@ body{
 
 /* cta section */
 .cta-section {
-    background: #f9f9f9;
+    background-color: #e0e0e0;
     text-align: center;
     padding: 50px 20px;
 }
@@ -243,8 +279,8 @@ body{
 
 .cta-button {
     display: inline-block;
-    background:black;
-    color: #ff6600;
+    background:#2C2C2C;
+    color: #F15A29;
     padding: 12px 24px;
     border-radius: 6px;
     text-decoration: none;
@@ -272,7 +308,7 @@ body{
 .footer-brand h3 {
     display: flex;
     align-items: center;
-    color: #ff6600;
+    color: #F15A29;
     text-align: center;
 }
 
@@ -340,7 +376,7 @@ body{
 .subscribe button {
     padding: 10px 15px;
     border: none;
-    background: #ff6600;
+    background: #F15A29;
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -393,7 +429,7 @@ body{
             flex-direction: column;
             align-items: flex-start;
             margin-top: 1rem;
-            background-color: black;
+            background-color: #2C2C2C;
             box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
             padding: 1rem;
             margin-top: 3rem;
@@ -436,42 +472,5 @@ body{
             color: white;
             font-size: 1.3rem;
         }
-
-        #testimonial {
-            height: auto;
-            padding: 20px;
-        }
-
-        .testimonial-container {
-            width: 80%;
-            padding: 10px;
-            height: auto;
-            flex-direction: column;
-            margin-bottom: 20px;
-        }
-
-        .testimonial-slide img {
-            width: 6rem;
-            height: 6rem;
-        }
-
-        .project-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .project-card {
-            width: 100%;
-            padding: 15px;
-        }
-
-        .section-title {
-            font-size: 1.5em;
-        }
-
-        .prev { left: -35px; }
-        .next { right: -38px; }
-
 
     }

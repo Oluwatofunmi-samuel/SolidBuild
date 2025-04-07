@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SolidBuild COnstucts</title>
+    <title>SolidBuild Constucts</title>
     <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -55,37 +55,29 @@
         </section>
 
         <!-- testimonial-section -->
-        <section id="testimonial">
+        <section class="testimonials-section">
             <h2>What Our Clients Say</h2>
-            <div class="testimonial-container">
-                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                <div class="testimonial-slide active">
-                    <img src="testimonial3.png" alt="Client Photo">
-                    <div>
-                    <h3>John Trevor</h3>
-                    <p>"We hired SolidBuild Constructions for our home renovation, and the results were fantastic!"</p>
-                    <span class="stars">★★★★★</span>
-                    </div>
-                </div>
-                <div class="testimonial-slide">
-                    <img src="testimonial1.png" alt="Client Photo">
-                    <div>
-                    <h3>Jane Smith</h3>
-                    <p>"SolidBuild Constructions transformed our office space beautifully! Highly recommend!"</p>
-                    <span class="stars">★★★★★</span>
-                    </div>
-                </div>
-                <div class="testimonial-slide">
-                    <img src="testimonial2.png" alt="Client Photo">
-                    <div>
-                    <h3>Michael Tompson</h3>
-                    <p>"Their team was professional, and the work was completed on time. Great service!"</p>
-                    <span class="stars">★★★★★</span>
-                    </div>
-                </div>
-                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            <div class="testimonial-container" id="testimonialScroll">
+              <div class="testimonial">
+                <p>"The team was professional, punctual, and exceeded our expectations. Highly recommend!"</p>
+                <h4>– James A., Real Estate Developer</h4>
+              </div>
+              <div class="testimonial">
+                <p>"Top-notch construction service. Great communication and delivery was ahead of schedule."</p>
+                <h4>– Martha K., Homeowner</h4>
+              </div>
+              <div class="testimonial">
+                <p>"From planning to execution, everything was flawless. Will hire again!"</p>
+                <h4>– Peter O., Architect</h4>
+              </div>
             </div>
-        </section>
+        
+            <div class="dots">
+              <div class="dot active"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </section>
 
         <!-- product-section -->
         <section id="product">
@@ -166,14 +158,33 @@
             </footer>
     </main>      
     <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll(".testimonial-slide");
+    const container = document.getElementById('testimonialScroll');
+    const dots = document.querySelectorAll('.dot');
 
-    function changeSlide(direction) {
-        slides[currentSlide].classList.remove("active");
-        currentSlide = (currentSlide + direction + slides.length) % slides.length;
-        slides[currentSlide].classList.add("active");
-    }    
+    container.addEventListener('scroll', () => {
+      const scrollLeft = container.scrollLeft;
+      const width = container.clientWidth;
+
+      const index = Math.round(scrollLeft / width);
+
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[index]) {
+        dots[index].classList.add('active');
+      }
+    });
+
+    // Arrow key navigation (Desktop only)
+    window.addEventListener('keydown', (event) => {
+      if (window.innerWidth > 768) { // Only for desktop (screen width > 768px)
+        const scrollWidth = container.clientWidth;
+        const scrollLeft = container.scrollLeft;
+        if (event.key === 'ArrowRight') {
+          container.scrollLeft = scrollLeft + scrollWidth; // Move right
+        } else if (event.key === 'ArrowLeft') {
+          container.scrollLeft = scrollLeft - scrollWidth; // Move left
+        }
+      }
+    });
     
     document.addEventListener("DOMContentLoaded", function () {
     const elements = document.querySelectorAll("main *:not(.footer):not(.no-animate)");
@@ -191,9 +202,9 @@
                 observer.unobserve(entry.target); // Stop observing after first animation
             }
         });
-    }, { threshold: 0.3 });
+        }, { threshold: 0.3 });
 
-    elements.forEach((element, index) => {
+        elements.forEach((element, index) => {
         element.classList.add("animate");
         element.dataset.animId = "anim-" + index; 
 
@@ -202,25 +213,24 @@
         }
 
         observer.observe(element);
+        });
     });
-});
 
-const toggleBtn = document.querySelector(".menu-toggle");  // Use the correct class for the button
-const menu = document.querySelector(".navbar");  // Target the navbar for the menu
+    const toggleBtn = document.querySelector(".menu-toggle");  // Use the correct class for the button
+    const menu = document.querySelector(".navbar");  // Target the navbar for the menu
 
-// Toggle menu visibility when clicking the button
-toggleBtn.addEventListener("click", function(event) {
+    // Toggle menu visibility when clicking the button
+    toggleBtn.addEventListener("click", function(event) {
     menu.classList.toggle("active");
     event.stopPropagation(); // Prevent click event from bubbling up to the document
-});
+    });
 
-// Hide menu when clicking anywhere outside of it
-document.addEventListener("click", function(event) {
+    // Hide menu when clicking anywhere outside of it
+    document.addEventListener("click", function(event) {
     if (!menu.contains(event.target) && !toggleBtn.contains(event.target)) {
         menu.classList.remove("active");
     }
-});
-
+    });
 
     </script>
 </body>
