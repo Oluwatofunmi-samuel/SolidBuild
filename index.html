@@ -9,43 +9,42 @@
 
 </head>
 <body>
-    <main>     
+    <main>  
+        <section class="section">
+            <div class="overlay"></div>
         <!-- navbar -->
         <header>
-            <div class="container">
                 <nav class="navbar">
                     <div class="logo">
                         <p>SolidBuild</p>
                     </div>
                     <ul>
-                        <li><a href="#home">Home</a></li>
+                        <li><a href=".hero">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#testimonial">Testimonial</a></li>
-                        <li><a href="#product">Product</a></li>
+                        <li><a href="#services">Service</a></li>
+                        <li><a href=".testimonial-section">Testimonial</a></li>
                     </ul>
                     <a class="button" href="form.html" target="_blank">Hire us</a>
                     <button class="menu-toggle">☰</button>
                 </nav>
-            </div>
         </header>
     
 
         <!-- home section -->
-        <section id="home">
-            <div class="hero-section">
-                <div class="hero-text">
-                    <h1>Building the <span class="highlight">Future</span>, Restoring the <span class="highlight">Past</span></h1>
-                    <p>We deliver high-quality construction services that stand the test of time. From commercial buildings to residential spaces, we bring your vision to life.</p>
-                    <a class="btn" href="form.html" target="_blank">Hire us</a>
-                </div>
-                <img src="img1.png" alt="construction tools" class="hero-img">
+        <section class="hero">
+            <!-- <div class="overlay"></div> -->
+            <div class="hero-content"  data-aos="fade-up">
+              <h1>Building the <span>Future</span>,<br> Restoring the <span>Past</span></h1>
+              <p>Your trusted partner in commercial and residential construction.</p>
+              <a href="form.html" target="blank"><button class="btn"> Hire Us</button></a>
             </div>
-        </section>
+          </section>
+        </section>   
     
         <!-- about-section -->
         <section id="about">
             <div class="about-section">
-                <div class="about-text hero-text">
+                <div class="about-text hero-text" data-aos="fade-up">
                     <h3>About us</h3>
                     <h1><span class="highlight">SolidBuild</span> is the best plug for your construction projects.</h1>
                     <p>With years of experience in the construction industry, SolidBuild Constructions is committed to delivering excellence, innovation, and sustainability in every project.We work to create strong, durable, and aesthetically pleasing structures while maintaining high ethical standards.</p>
@@ -54,9 +53,28 @@
             </div>
         </section>
 
+         <!-- Services Section -->
+        <section id="services">
+            <h2 data-aos="fade-up">Our Services</h2>
+            <div class="service-grid" data-aos="fade-up">
+            <div class="service-card">
+            <h3>Residential Construction</h3>
+            <p>Custom homes, renovations, and extensions built with care and precision.</p>
+            </div>
+            <div class="service-card">
+            <h3>Commercial Projects</h3>
+            <p>We build office spaces, retail stores, and commercial buildings that last.</p>
+            </div>
+            <div class="service-card">
+            <h3>Project Management</h3>
+            <p>End-to-end project oversight to keep your job on track and on budget.</p>
+      </div>
+    </div>
+  </section>
+
         <!-- testimonial-section -->
         <section class="testimonials-section">
-            <h2>What Our Clients Say</h2>
+            <h2 data-aos="fade-up">What Our Clients Say</h2>
             <div class="testimonial-container" id="testimonialScroll">
               <div class="testimonial">
                 <p>"The team was professional, punctual, and exceeded our expectations. Highly recommend!"</p>
@@ -82,7 +100,7 @@
         <!-- product-section -->
         <section id="product">
             <div class="container">
-                <h2 class="section-title">Check out some of our completed Projects in Lagos</h2>
+                <h2 class="section-title" data-aos="fade-up">Check out some of our completed Projects in Lagos</h2>
                 <div class="project-grid">
                     <div class="project-card">
                         <img src="tower.jpeg" alt="Eko Towers, Victoria Island" class="tower">
@@ -156,8 +174,11 @@
                     </div>
                 </div>
             </footer>
-    </main>      
+    </main> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>     
+    <script> AOS.init(); </script>
     <script>
+
     const container = document.getElementById('testimonialScroll');
     const dots = document.querySelectorAll('.dot');
 
@@ -186,35 +207,6 @@
       }
     });
     
-    document.addEventListener("DOMContentLoaded", function () {
-    const elements = document.querySelectorAll("main *:not(.footer):not(.no-animate)");
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Check if this element has already been animated in this session
-                if (!sessionStorage.getItem(entry.target.dataset.animId)) {
-                    entry.target.classList.add("show");
-                    sessionStorage.setItem(entry.target.dataset.animId, "animated");
-                } else {
-                    entry.target.classList.add("show"); // Ensure visibility even if already animated
-                }
-                observer.unobserve(entry.target); // Stop observing after first animation
-            }
-        });
-        }, { threshold: 0.3 });
-
-        elements.forEach((element, index) => {
-        element.classList.add("animate");
-        element.dataset.animId = "anim-" + index; 
-
-        if (sessionStorage.getItem(element.dataset.animId)) {
-            element.classList.add("show");
-        }
-
-        observer.observe(element);
-        });
-    });
 
     const toggleBtn = document.querySelector(".menu-toggle");  // Use the correct class for the button
     const menu = document.querySelector(".navbar");  // Target the navbar for the menu

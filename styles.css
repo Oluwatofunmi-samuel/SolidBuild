@@ -13,15 +13,19 @@ body{
 .highlight{
     color: #F15A29;
 }
+.section{
+    background-image: url(imgs.jpg);
+    background-size: cover;
+    background-position: center;
+}
 /* navbar section */
 header{
-    background-color: #e0e0e0;
-}
-
-.container{
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 .navbar{
     display: grid;
@@ -30,12 +34,11 @@ header{
     border-radius: 24px;
     height: 3rem;
     width: 29rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
     background-color: #2C2C2C;
     padding: 0;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .navbar ul {
@@ -91,11 +94,68 @@ header{
 }
 
 
-/* home-section / about-section */
-#home{
-    background-color: #e0e0e0;
-}
-.hero-section, .about-section {
+/* home-section */
+.hero {
+    position: relative;
+    background-color: none;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* White overlay */
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+    margin: 0;
+  }
+
+  .hero-content h1 span {
+    color: #F15A29;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+
+  .btn {
+    background-color: #F15A29;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 5px;
+  }
+
+  .btn:hover {
+    background-color: #d14a1f;
+    transform: scale(1.05);
+  }
+
+  /* about section */
+.about-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,19 +164,12 @@ header{
     height: auto;
     padding: 20px;
 }
-.hero-text{
-    width: 100%;
-    max-width: 38rem;
-}
-.hero-text h1, .about-text h1 {
+
+.about-text h1 {
     font-size: 4rem;
     margin-bottom: 20px;
-    /* border: 1px solid #2C2C2C; */
 }
-.hero-text p{
-    font-size: 20px;
-    margin-bottom: 20px;
-}
+
 .btn {
     color: white;
     background-color: #F15A29;
@@ -127,11 +180,12 @@ header{
     font-size: 20px;
     margin-bottom: 20px;
 }
-.hero-img, .about-img {
+.about-img {
     width: 100%;
     max-width: 25rem;
 }
 .about-text h3 {
+    font-size: 2rem;
     text-decoration: underline;
     margin-bottom: 10px;
 }
@@ -145,15 +199,54 @@ header{
     width: 100%;
     max-width: 43rem;
 }
-.about-text h1{
-     border: none;
-     font-size: 3.5rem;
+
+/* Services */
+#services{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-bottom: 2rem;
+    background-color: #e0e0e0;
+    padding: 40px 20px;
 }
+
+#services h2{
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+.service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+  
+.service-card {
+    background-color: white;
+    padding: 30px;
+    max-width: 300px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+  
+    .service-card h3 {
+    color: #F15A29;
+    margin-bottom: 10px;
+    }
+  
+    .service-card p {
+    color: #333;
+    line-height: 1.5;
+    }
 
 /* testimonial-section */
 .testimonials-section {
     padding: 40px 20px;
-    background-color: #e0e0e0;
     text-align: center;
   }
 
@@ -178,7 +271,7 @@ header{
     background-color: #ffffff;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
     scroll-snap-align: center;
     min-width: 300px;
   }
@@ -224,6 +317,9 @@ header{
   }
 
 /* product section */
+#product{
+    background-color: #e0e0e0;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -266,7 +362,6 @@ header{
 
 /* cta section */
 .cta-section {
-    background-color: #e0e0e0;
     text-align: center;
     padding: 50px 20px;
 }
@@ -474,4 +569,8 @@ header{
             font-size: 1.3rem;
         }
 
+        .service-grid {
+            flex-direction: column;
+            align-items: center;
+          }
     }
