@@ -1,0 +1,477 @@
+/* default styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.highlight{
+    color: #ff6600;
+}
+/* navbar section */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    border-radius: 24px;
+    height: 3rem;
+    width: 29rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    background-color: black;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 0.5rem;
+}
+
+.navbar ul li{
+    display: inline;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+    background-color: #ff6600;
+    width: 7rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: none;
+    border-radius: 25px;
+    color: black;
+}
+
+.logo p, .button{
+      font-weight: 600;
+}
+
+.button{
+    color: black;
+    background-color:#ff6600;
+    width: 6rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+/* home-section / about-section */
+.hero-section, .about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding: 20px;
+}
+.hero-text, .about-text {
+    width: 100%;
+    max-width: 32rem;
+}
+.hero-text h1, .about-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+.hero-text p, .about-text p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.btn {
+    color: #ff6600;
+    background-color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.hero-img, .about-img {
+    width: 100%;
+    max-width: 24.5rem;
+    margin-top: 20px;
+}
+.about-text h3 {
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.about-text h1{
+     border: none;
+}
+
+/* testimonial-section */
+#testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 65vh;
+}
+
+#testimonial h2{
+    margin-bottom: 1rem;
+}
+.testimonial-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 30rem;
+    height: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.testimonial-slide {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+}
+.testimonial-slide.active {
+    display: flex;
+}
+.testimonial-slide img {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 10px;
+    border: 1px solid #ff6600;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    background: #ddd;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.prev { left: -40px; }
+.next { right: -40px; }
+.stars {
+    color: gold;
+}
+
+/* product section */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 50px 0;
+}
+.section-title {
+    font-size: 2em;}
+.project-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 300px;
+}
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.project-card h3 {
+    margin: 15px 0 10px;
+    color: #ff6600;
+}
+.project-card p {
+    color: #555;
+}
+
+
+/* cta section */
+.cta-section {
+    background: #f9f9f9;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background:black;
+    color: #ff6600;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* footer section  */
+
+.footer {
+    background: #1a1a1a;
+    color: white;
+}
+
+.footer .container {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-brand h3 {
+    display: flex;
+    align-items: center;
+    color: #ff6600;
+    text-align: center;
+}
+
+.footer-brand img {
+    width: 8rem;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    margin-top: 1rem;
+    width: 5rem;
+    margin-right: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-column input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+
+.subscribe {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.subscribe input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.subscribe button {
+    padding: 10px 15px;
+    border: none;
+    background: #ff6600;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Responsive Design andriod phones*/
+    @media (max-width: 767px) {
+        .hero-text h1{
+            border: none;
+        }
+
+        .hero-text h1, .about-text h1 {
+            font-size: 2rem;
+        }
+
+        .hero-text p, .about-text p {
+            font-size: 14px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 4rem;
+            padding: 0 1rem;
+            border-radius: 0;
+            margin-top: 0;
+        }
+
+        .navbar ul {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 1rem;
+            background-color: black;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            margin-top: 3rem;
+        }
+
+        .navbar ul li {
+            width: 100%;
+            text-align: right;
+        }
+
+        .navbar ul li a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: white;
+        }
+
+        .button {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: block;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .navbar.active ul {
+            display: flex;
+        }
+
+        .logo{
+            background-color: none;
+            width: 0;
+            height: 0;
+            margin-left: 2rem;
+            border: none;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        #testimonial {
+            height: auto;
+            padding: 20px;
+        }
+
+        .testimonial-container {
+            width: 80%;
+            padding: 10px;
+            height: auto;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-slide img {
+            width: 6rem;
+            height: 6rem;
+        }
+
+        .project-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .project-card {
+            width: 100%;
+            padding: 15px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+        }
+
+        .prev { left: -35px; }
+        .next { right: -38px; }
+
+
+    }

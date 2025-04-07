@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolidBuild COnstucts</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <main>     
+        <!-- navbar -->
+        <header>
+            <div class="container">
+                <nav class="navbar">
+                    <div class="logo">
+                        <p>SolidBuild</p>
+                    </div>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#testimonial">Testimonial</a></li>
+                        <li><a href="#product">Product</a></li>
+                    </ul>
+                    <a class="button" href="form.html" target="_blank">Hire us</a>
+                    <button class="menu-toggle">☰</button>
+                </nav>
+            </div>
+        </header>
+    
+
+        <!-- home section -->
+        <section id="home">
+            <div class="hero-section">
+                <div class="hero-text">
+                    <h1>Building the <span class="highlight">Future</span>, Restoring the <span class="highlight">Past</span></h1>
+                    <p>We deliver high-quality construction services that stand the test of time. From commercial buildings to residential spaces, we bring your vision to life.</p>
+                    <a class="btn" href="form.html" target="_blank">Hire us</a>
+                </div>
+                <img src="img1.png" alt="construction tools" class="hero-img">
+            </div>
+        </section>
+    
+        <!-- about-section -->
+        <section id="about">
+            <div class="about-section">
+                <div class="about-text hero-text">
+                    <h3>About us</h3>
+                    <h1><span class="highlight">SolidBuild</span> is the best plug for your construction projects.</h1>
+                    <p>With years of experience in the construction industry, SolidBuild Constructions is committed to delivering excellence, innovation, and sustainability in every project. Our Values: Quality, Integrity, Safety, and Customer Satisfaction. Mission Statement: To create strong, durable, and aesthetically pleasing structures while maintaining high ethical standards.</p>
+                </div>
+                <img src="img2.png" alt="construction tools" class="about-img">
+            </div>
+        </section>
+
+        <!-- testimonial-section -->
+        <section id="testimonial">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-container">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <div class="testimonial-slide active">
+                    <img src="testimonial3.png" alt="Client Photo">
+                    <div>
+                    <h3>John Trevor</h3>
+                    <p>"We hired SolidBuild Constructions for our home renovation, and the results were fantastic!"</p>
+                    <span class="stars">★★★★★</span>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <img src="testimonial1.png" alt="Client Photo">
+                    <div>
+                    <h3>Jane Smith</h3>
+                    <p>"SolidBuild Constructions transformed our office space beautifully! Highly recommend!"</p>
+                    <span class="stars">★★★★★</span>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <img src="testimonial2.png" alt="Client Photo">
+                    <div>
+                    <h3>Michael Tompson</h3>
+                    <p>"Their team was professional, and the work was completed on time. Great service!"</p>
+                    <span class="stars">★★★★★</span>
+                    </div>
+                </div>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- product-section -->
+        <section id="product">
+            <div class="container">
+                <h2 class="section-title">Check out some of our completed Projects in Lagos</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="tower.jpeg" alt="Eko Towers, Victoria Island" class="tower">
+                        <h3>Eko Towers, Victoria Island</h3>
+                        <p>A modern high-rise building designed for luxury offices and residential apartments.</p>
+                    </div>
+                    <div class="project-card">
+                        <img src="estate.jpeg" alt="Lekki Smart Estate">
+                        <h3>Lekki Smart Estate</h3>
+                        <p>A state-of-the-art gated community with eco-friendly designs and smart home features.</p>
+                    </div>
+                    <div class="project-card">
+                        <img src="business.jpeg" alt="Ikeja Business Hub">
+                        <h3>Ikeja Business Hub</h3>
+                        <p>A commercial complex that provides office spaces for top businesses in Lagos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- cta section -->
+        <section class="cta-section">
+            <div class="cta-container">
+            <h2>Let SolidBuild Handle Your Construction Projects</h2>
+            <a class="cta-button" href="form.html" target="_blank">Hire Us →</a>
+            </div>
+            </section>
+
+        <!-- footer section -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-top">
+                        <div class="footer-brand">
+                            <h3 class="logo-text">SolidBuild</h3>
+                            <p>Copyright © 2024 SolidBuild Ltd.<br>All rights reserved</p>
+                            <div class="social-icons"><i class="8+ fa-vimeo-v    "></i>
+                                <img src="Social Links.png" alt="Social Media Links" class="no-animate">
+
+                            </div>
+                        </div>
+        
+                        <div class="footer-links">
+                            <div class="footer-column">
+                                <h4>Company</h4>
+                                <ul>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="#">Testimonials</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-column">
+                                <h4>Support</h4>
+                                <ul>
+                                    <li><a href="#">Help center</a></li>
+                                    <li><a href="#">Terms of service</a></li>
+                                    <li><a href="#">Legal</a></li>
+                                    <li><a href="#">Privacy policy</a></li>
+                                    <li><a href="#">Status</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-column">
+                                <h4>Stay up to date</h4>
+                                <div class="subscribe">
+                                    <input type="email" placeholder="Your email address">
+                                    <button>Subscribe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    </main>      
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".testimonial-slide");
+
+    function changeSlide(direction) {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
+        slides[currentSlide].classList.add("active");
+    }    
+    
+    document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll("main *:not(.footer):not(.no-animate)");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Check if this element has already been animated in this session
+                if (!sessionStorage.getItem(entry.target.dataset.animId)) {
+                    entry.target.classList.add("show");
+                    sessionStorage.setItem(entry.target.dataset.animId, "animated");
+                } else {
+                    entry.target.classList.add("show"); // Ensure visibility even if already animated
+                }
+                observer.unobserve(entry.target); // Stop observing after first animation
+            }
+        });
+    }, { threshold: 0.3 });
+
+    elements.forEach((element, index) => {
+        element.classList.add("animate");
+        element.dataset.animId = "anim-" + index; 
+
+        if (sessionStorage.getItem(element.dataset.animId)) {
+            element.classList.add("show");
+        }
+
+        observer.observe(element);
+    });
+});
+
+const toggleBtn = document.querySelector(".menu-toggle");  // Use the correct class for the button
+const menu = document.querySelector(".navbar");  // Target the navbar for the menu
+
+// Toggle menu visibility when clicking the button
+toggleBtn.addEventListener("click", function(event) {
+    menu.classList.toggle("active");
+    event.stopPropagation(); // Prevent click event from bubbling up to the document
+});
+
+// Hide menu when clicking anywhere outside of it
+document.addEventListener("click", function(event) {
+    if (!menu.contains(event.target) && !toggleBtn.contains(event.target)) {
+        menu.classList.remove("active");
+    }
+});
+
+
+    </script>
+</body>
+</html>
