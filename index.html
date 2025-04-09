@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SolidBuild Constucts</title>
     <link rel="stylesheet" href="styles.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <main>  
@@ -19,10 +20,10 @@
                         <p>SolidBuild</p>
                     </div>
                     <ul>
-                        <li><a href=".hero">Home</a></li>
+                        <li><a href="#hero">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Service</a></li>
-                        <li><a href=".testimonial-section">Testimonial</a></li>
+                        <li><a href="#testimonials-section">Testimonial</a></li>
                     </ul>
                     <a class="button" href="form.html">Hire us</a>
                     <button class="menu-toggle">☰</button>
@@ -31,8 +32,8 @@
     
 
         <!-- home section -->
-        <section class="hero">
-            <div class="hero-content"  data-aos="fade-up">
+        <section id="hero">
+            <div class="hero-content"   data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="300" data-aos-duration="1500">
               <h1>Building the <span>Future</span>,<br> Restoring the <span>Past</span></h1>
               <p>Your trusted partner in commercial and residential construction.</p>
               <a href="form.html"><button class="btn"> Hire Us</button></a>
@@ -43,7 +44,7 @@
         <!-- about-section -->
         <section id="about">
             <div class="about-section">
-                <div class="about-text hero-text" data-aos="fade-up">
+                <div class="about-text hero-text"  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="300" data-aos-duration="1500">
                     <h3>About us</h3>
                     <h1><span class="highlight">SolidBuild</span> is the best plug for your construction projects.</h1>
                     <p>With years of experience in the construction industry, SolidBuild Constructions is committed to delivering excellence, innovation, and sustainability in every project.We work to create strong, durable, and aesthetically pleasing structures while maintaining high ethical standards.</p>
@@ -54,17 +55,17 @@
 
          <!-- Services Section -->
         <section id="services">
-            <h2 data-aos="fade-up">Our Services</h2>
-            <div class="service-grid" data-aos="fade-up">
-            <div class="service-card">
+            <h2 >Our Services</h2>
+            <div class="service-grid" >
+            <div class="service-card card">
             <h3>Residential Construction</h3>
             <p>Custom homes, renovations, and extensions built with care and precision.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card card">
             <h3>Commercial Projects</h3>
             <p>We build office spaces, retail stores, and commercial buildings that last.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card card">
             <h3>Project Management</h3>
             <p>End-to-end project oversight to keep your job on track and on budget.</p>
       </div>
@@ -72,8 +73,8 @@
   </section>
 
         <!-- testimonial-section -->
-        <section class="testimonials-section">
-            <h2 data-aos="fade-up">What Our Clients Say</h2>
+        <section id="testimonials-section"  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="300" data-aos-duration="1500">
+            <h2 >What Our Clients Say</h2>
             <div class="testimonial-container" id="testimonialScroll">
               <div class="testimonial">
                 <p>"The team was professional, punctual, and exceeded our expectations. Highly recommend!"</p>
@@ -99,19 +100,19 @@
         <!-- product-section -->
         <section id="product">
             <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Check out some of our completed Projects in Lagos</h2>
+                <h2 class="section-title" >Check out some of our completed Projects in Lagos</h2>
                 <div class="project-grid">
-                    <div class="project-card">
+                    <div class="project-card card" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="500" data-aos-duration="1500">
                         <img src="tower.jpeg" alt="Eko Towers, Victoria Island" class="tower">
                         <h3>Eko Towers, Victoria Island</h3>
                         <p>A modern high-rise building designed for luxury offices and residential apartments.</p>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card card" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="300" data-aos-duration="1500">
                         <img src="estate.jpeg" alt="Lekki Smart Estate">
                         <h3>Lekki Smart Estate</h3>
                         <p>A state-of-the-art gated community with eco-friendly designs and smart home features.</p>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card card" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="100" data-aos-duration="1500">
                         <img src="business.jpeg" alt="Ikeja Business Hub">
                         <h3>Ikeja Business Hub</h3>
                         <p>A commercial complex that provides office spaces for top businesses in Lagos.</p>
@@ -129,55 +130,42 @@
             </section>
 
         <!-- footer section -->
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer-top">
-                        <div class="footer-brand">
-                            <h3 class="logo-text">SolidBuild</h3>
-                            <p>Copyright © 2024 SolidBuild Ltd.<br>All rights reserved</p>
-                            <div class="social-icons"><i class="8+ fa-vimeo-v    "></i>
-                                <img src="Social Links.png" alt="Social Media Links" class="no-animate">
-
-                            </div>
-                        </div>
-        
-                        <div class="footer-links">
-                            <div class="footer-column">
-                                <h4>Company</h4>
-                                <ul>
-                                    <li><a href="#">About us</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Contact us</a></li>
-                                    <li><a href="#">Pricing</a></li>
-                                    <li><a href="#">Testimonials</a></li>
-                                </ul>
-                            </div>
-                            <div class="footer-column">
-                                <h4>Support</h4>
-                                <ul>
-                                    <li><a href="#">Help center</a></li>
-                                    <li><a href="#">Terms of service</a></li>
-                                    <li><a href="#">Legal</a></li>
-                                    <li><a href="#">Privacy policy</a></li>
-                                    <li><a href="#">Status</a></li>
-                                </ul>
-                            </div>
-                            <div class="footer-column">
-                                <h4>Stay up to date</h4>
-                                <div class="subscribe">
-                                    <input type="email" placeholder="Your email address">
-                                    <button>Subscribe</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <footer>
+            <div class="footer-container">
+              <div class="footer-about">
+                <h3>SolidBuild</h3>
+                <p>We build structures that last — with integrity, innovation, and excellence.</p>
+              </div>
+          
+              <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#testimonials-section">Testimonial</a></li>
+                </ul>
+              </div>
+          
+              <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: info@solidbuild.com</p>
+                <p>Phone: +234 702 342 3423</p>
+                <div class="social-icons">
+                  <a href="#"><img src="https://img.icons8.com/ios-filled/25/facebook.png"/></a>
+                  <a href="#"><img src="https://img.icons8.com/ios-filled/25/instagram-new.png"/></a>
+                  <a href="#"><img src="https://img.icons8.com/ios-filled/25/linkedin.png"/></a>
                 </div>
-            </footer>
+              </div>
+            </div>
+            <div class="copyright">
+              &copy; 2025 SolidBuild Constructions. All rights reserved.
+            </div>
+          </footer>
     </main> 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>     
-    <script> AOS.init(); </script>
-    <script>
 
+    <script>
+        // scroll testimonial 
     const container = document.getElementById('testimonialScroll');
     const dots = document.querySelectorAll('.dot');
 
@@ -195,28 +183,26 @@
 
     // Arrow key navigation (Desktop only)
     window.addEventListener('keydown', (event) => {
-      if (window.innerWidth > 768) { // Only for desktop (screen width > 768px)
+      if (window.innerWidth > 768) { 
         const scrollWidth = container.clientWidth;
         const scrollLeft = container.scrollLeft;
         if (event.key === 'ArrowRight') {
-          container.scrollLeft = scrollLeft + scrollWidth; // Move right
+          container.scrollLeft = scrollLeft + scrollWidth;
         } else if (event.key === 'ArrowLeft') {
-          container.scrollLeft = scrollLeft - scrollWidth; // Move left
+          container.scrollLeft = scrollLeft - scrollWidth; 
         }
       }
     });
     
-
-    const toggleBtn = document.querySelector(".menu-toggle");  // Use the correct class for the button
-    const menu = document.querySelector(".navbar");  // Target the navbar for the menu
+    // toggle button
+    const toggleBtn = document.querySelector(".menu-toggle");  
+    const menu = document.querySelector(".navbar");  
 
     // Toggle menu visibility when clicking the button
     toggleBtn.addEventListener("click", function(event) {
     menu.classList.toggle("active");
-    event.stopPropagation(); // Prevent click event from bubbling up to the document
+    event.stopPropagation();
     });
-
-    // Hide menu when clicking anywhere outside of it
     document.addEventListener("click", function(event) {
     if (!menu.contains(event.target) && !toggleBtn.contains(event.target)) {
         menu.classList.remove("active");
@@ -224,5 +210,8 @@
     });
 
     </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>

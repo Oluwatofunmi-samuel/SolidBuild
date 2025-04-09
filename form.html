@@ -4,142 +4,143 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hire Us</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background-color: #ffffff;
-      color: #000000;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1000px;
-      margin: 60px auto;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      border-radius: 16px;
-      overflow: hidden;
-    }
-
-    .form-section, .info-section {
-      flex: 1 1 400px;
-      flex: 1;
-      padding: 40px;
-    }
-
-    .form-section {
-      background-color: #ffffff;
-    }
-
-    .info-section {
-      background-image: url(sky.jpg);
-      background-size: cover;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-    }
-
-    .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(31, 28, 28, 0.59); 
-    z-index: 1;
-  }
-
-  .content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 0 20px;
-  }
-
-    h2 {
-      color: #ff6600;
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      outline: none;
-      transition: border 0.3s;
-    }
-
-    input:focus, textarea:focus, select:focus {
-      border-color: #ff6600;
-    }
-
-    button {
-      background-color: #ff6600;
-      color: white;
-      border: none;
-      padding: 14px;
-      width: 100%;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background-color: #e05500;
-    }
-
-    .info-section h3 {
-      font-size: 26px;
-      color: #ff6600;
-      margin-bottom: 20px;
-    }
-
-    .highlight-box {
-      background-color: #ff6600;
-      color: white;
-      padding: 30px;
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 18px;
-      margin-top: 30px;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        margin: 20px;
-      }
-    }
-  </style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 60px auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .form-section, .info-section {
+    flex: 1 1 400px;
+    flex: 1;
+    padding: 40px;
+  }
+
+  .form-section {
+    background-color: #ffffff;
+  }
+
+  .info-section {
+    background-image: url(sky.jpg);
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(31, 28, 28, 0.59); 
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+  h2 {
+    color: #ff6600;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s;
+  }
+
+  input:focus, textarea:focus, select:focus {
+    border-color: #ff6600;
+  }
+
+  button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background-color: #e05500;
+  }
+
+  .info-section h3 {
+    font-size: 26px;
+    color: #ff6600;
+    margin-bottom: 20px;
+  }
+
+  .highlight-box {
+    background-color: #ff6600;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      margin: 20px;
+    }
+  }
+</style>
 <body>
 
-  <div class="container">
+  <div class="container" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-delay="300" data-aos-duration="1500">
     <!-- Form Section -->
     <div class="form-section">
       <h2>Hire Us</h2>
-      <form>
+      <form onsubmit="showSuccess(); return false;">
         <label for="name">Full Name</label>
         <input type="text" id="name" placeholder="Enter your full name" required>
 
@@ -173,5 +174,13 @@
     </div>
   </div>
 
+  <script>
+    function showSuccess() {
+      alert("Thank you! We'll contact you soon.")
+    }
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>

@@ -1,4 +1,8 @@
 /* default styles */
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -18,6 +22,15 @@ body{
     background-size: cover;
     background-position: center;
 }
+
+.card{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background-color: #bbb;  
+}
 /* navbar section */
 header{
     background-color: transparent;
@@ -27,6 +40,7 @@ header{
     position: relative;
     z-index: 2;
 }
+
 .navbar{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -39,6 +53,7 @@ header{
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+
 }
 
 .navbar ul {
@@ -95,12 +110,12 @@ header{
 
 
 /* home-section */
-.hero {
+#hero {
     position: relative;
     background-color: none;
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,7 +260,7 @@ header{
     }
 
 /* testimonial-section */
-.testimonials-section {
+#testimonials-section {
     padding: 40px 20px;
     text-align: center;
   }
@@ -383,116 +398,83 @@ header{
 }
 
 /* footer section  */
-
-.footer {
-    background: #1a1a1a;
+footer {
+    background-color: #1A1A1A;
     color: white;
-}
+    padding: 50px 20px 20px;
+    font-family: 'Poppins', sans-serif;
+  }
 
-.footer .container {
-    max-width: 2000px;
-    margin: 0 auto;
-}
-
-.footer-top {
+  .footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+  }
 
-.footer-brand h3 {
-    display: flex;
-    align-items: center;
+  .footer-about, .footer-links, .footer-contact {
+    flex: 1;
+    min-width: 220px;
+  }
+
+  .footer-about h3 {
     color: #F15A29;
-    text-align: center;
-}
+  }
 
-.footer-brand img {
-    width: 8rem;
-}
-
-.footer-brand p {
-    font-size: 14px;
-    color: #ccc;
-    margin-top: 10px;
-}
-
-.social-icons img {
-    margin-top: 1rem;
-    width: 5rem;
-    margin-right: 10px;
-}
-
-.footer-links {
-    display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-.footer-column h4 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.footer-column ul {
+  .footer-links ul {
     list-style: none;
     padding: 0;
-}
+  }
 
-.footer-column ul li a {
-    color: #ccc;
+  .footer-links ul li {
+    margin: 10px 0;
+  }
+
+  .footer-links a {
+    color: #e0e0e0;
     text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links a:hover {
+    color: #F15A29;
+  }
+
+  .footer-contact p {
+    margin: 8px 0;
+  }
+
+  .social-icons a {
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .social-icons img {
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease;
+  }
+
+  .social-icons img:hover {
+    transform: scale(1.2);
+  }
+
+  .copyright {
+    text-align: center;
+    padding-top: 30px;
     font-size: 14px;
-    display: block;
-    margin-bottom: 5px;
-}
+    color: #bbb;
+  }
 
-.footer-column input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    margin-top: 10px;
-}
-
-.subscribe {
-    display: flex;
-    gap: 5px;
-    margin-top: 10px;
-}
-
-.subscribe input {
-    flex: 1;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-}
-
-.subscribe button {
-    padding: 10px 15px;
-    border: none;
-    background: #F15A29;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.animate {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 
 /* Responsive Design andriod phones*/
     @media (max-width: 767px) {
-        .hero{
-            height: 90vh;
+        #hero{
+            min-height: 90vh;
         }
+
         .hero-text h1{
             border: none;
         }
@@ -577,4 +559,20 @@ header{
             flex-direction: column;
             align-items: center;
           }
+
+          .footer-container {
+            flex-direction: column;
+            text-align: center;
+            gap: 40px;
+          }
+      
+          .social-icons {
+            justify-content: center;
+          }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px){
+        #hero{
+            min-height: 89vh;
+        }
     }
